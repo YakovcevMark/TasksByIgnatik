@@ -1,0 +1,41 @@
+.message {
+    width: 300px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns:2fr 8fr;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: end;
+}
+
+.messageBody {
+    word-break: break-word;
+    padding: 6px;
+    background-color: #535b64;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-rows: minmax(10px, auto);
+}
+
+.authorName {
+    align-self: start;
+    justify-self: start;
+    font-size: large;
+    color: #61dafb;
+}
+
+.messageText {
+    color: #ffffff;
+}
+
+.messageTime {
+    align-self: end;
+    justify-self: end;
+    color: rgba(255, 255, 255, 0.37);
+}
+
+

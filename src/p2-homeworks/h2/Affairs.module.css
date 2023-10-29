@@ -1,0 +1,19 @@
+.affair {
+    display: grid;
+    width: 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.high {
+    color: red;
+}
+
+.middle {
+    color: yellow;
+}
+
+.low {
+    color: green;
+}
+
+
