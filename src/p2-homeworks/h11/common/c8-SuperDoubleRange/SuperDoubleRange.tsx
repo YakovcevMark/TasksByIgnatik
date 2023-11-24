@@ -2,7 +2,7 @@ import React from 'react'
 import {Slider} from "@material-ui/core";
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
+    onChangeRange?: (value: number | number[]) => void
     value?: [number, number]
     min?: number
     max?:number
@@ -17,20 +17,21 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     }
 ) => {
     // сделать самому, можно подключать библиотеки
-
+    const onChangeRageHandler = (event: React.ChangeEvent<{}>, value: number | number[]) => {
+        onChangeRange && onChangeRange(value)
+    }
     return (
         <>
             <Slider
                 getAriaLabel={() => 'Minimum distance'}
                 value={value}
-                onChange={onChangeRange}
+                onChange={onChangeRageHandler}
                 valueLabelDisplay="auto"
                 // getAriaValueText={valuetext}
-                disableSwap
                 min={min}
                 max={max}
                 step={step}
-                dosabled = {disable}
+                disabled = {disable}
 
             />
         </>

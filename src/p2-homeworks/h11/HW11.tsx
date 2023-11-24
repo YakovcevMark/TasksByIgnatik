@@ -5,7 +5,12 @@ import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 function HW11() {
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
-
+    const onChangeRageHandler = (val: number | number[]) => {
+        if(Array.isArray(val)){
+            setValue1(val[0])
+            setValue2(val[1])
+        }
+    }
     return (
         <div>
             <hr/>
@@ -24,7 +29,7 @@ function HW11() {
                 <span>{value1}</span>
                 <SuperDoubleRange
                     value={[value1,value2]}
-                    onChangeRange={[setValue1,setValue2]}
+                    onChangeRange={onChangeRageHandler}
                     // сделать так чтоб value1 и value2 изменялось
                 />
                 <span>{value2}</span>
