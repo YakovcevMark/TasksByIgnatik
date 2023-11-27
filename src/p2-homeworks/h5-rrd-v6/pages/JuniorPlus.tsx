@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import SuperCheckbox from "../../h4/common/c3-SuperCheckbox/SuperCheckbox";
 import SuperButton from "../../h4/common/c2-SuperButton/SuperButton";
 import axios from "axios";
+import HW12 from "../../h12/HW12";
 
 
 function HW13() {
@@ -21,6 +22,7 @@ function HW13() {
 function JuniorPlus() {
     return (
         <div>
+          <HW12/>
           <HW13/>
 
         </div>
